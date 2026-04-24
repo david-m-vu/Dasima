@@ -1,3 +1,19 @@
+.SearchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+
+
 .options ul {
     display: flex;
     justify-content: center;
@@ -23,25 +39,45 @@
 }
 
 .options li.active {
-    color: seagreen;
+    color: #EF539D;
 }
 
-input {
-    width: 15rem;
-    border-radius: 4px;
+.searchInput {
+    width: 20vw;
+    padding: 0.5em;
     font-size: 0.77rem;
+    font-family: "Rubik", sans-serif;
+    border-radius: 30px;
+    border: 1px solid black;
+    background-color: rgba(214, 24, 176, 0.5);
+    color: white;
+    outline: 0;
 }
 
-button {
-    margin-left: 20px;
-    border-radius: 4px;
-    background-color: wheat;
-    font-weight: 700;
+.searchButton {
+    border-radius: 50%;
+    background-color: #EF539D;
+    font-weight: 500;
+    font-size: 1rem;
     transition: background-color 0.5s;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
 }
 
-button:hover {
+.searchButton:hover {
     cursor: pointer;
-    background-color: #d8b676;
+    background-color: #d892b3;
+}
+
+.cards {
+    width: 3em;
+    filter: invert(100%);
+}
+
+.cards:hover {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    cursor: pointer;
+    border: 1px solid black;
 }

@@ -1,5 +1,39 @@
-img {
-    max-height: 300px;
-    padding: 15px;
-    min-height: 300px;
+.image-container {
+    position: relative;
 }
+
+.card {
+    height: clamp(300px, 25vh, 25vh);
+    /* height: 300px; */
+    margin: 15px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 3px #EF539D;
+}
+
+.closeButton {
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    top: 0px;
+    right: 1em;
+    animation: slide 0.3s ease-out 1;
+}
+
+.closeButton:hover {
+    cursor: pointer;
+    -webkit-text-stroke: 1px white;
+}
+
+@keyframes slide {
+    from {
+        top: -0.3em;
+        opacity: 0.3;
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+

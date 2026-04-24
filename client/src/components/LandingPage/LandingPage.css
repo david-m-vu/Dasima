@@ -1,0 +1,172 @@
+:root {
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+}
+
+.LandingPage {
+    display: grid;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+    place-items: center;
+}
+
+.links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1em;
+}
+
+#github {
+    width: 2.5em;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    width: 25vw; 
+    margin: 0;
+}
+
+.startButton {
+    background-color: black;
+    font-size: clamp(1em, 1vw, 2em);
+    font-family: "Rubik", sans-serif;
+    color: white;
+    border-radius: 30px;
+    border: 2px solid #EF539D;
+    padding: 0 3em;
+    letter-spacing: 0.2em;
+    animation: fade-in 3s ease-out 1
+}
+
+.startButton:hover {
+    background-color: rgb(177, 127, 173);
+    border-color: white;
+    letter-spacing: 0;
+
+    transition: background-color 1s, border-color 1s, letter-spacing 1s;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.englishText, .koreanText {
+    font-family: "Rubik", sans-serif;
+    font-size: clamp(4em, 5vw, 8em);
+    font-weight: 400;
+    margin: 0 0 0 0.3em;
+    padding: 0px;
+    text-align: center;
+    letter-spacing: 0.3em;
+    line-height: 120%;
+
+    animation: background-pan 2.5s linear infinite;
+    animation-fill-mode: both;
+    background: linear-gradient(
+        to right,
+        #EF539D, 
+        #d97ca8,
+        white,
+        #EF539D
+    );
+    /* background: linear-gradient(
+        to right,
+        var(--purple), 
+        var(--violet),
+        white,
+        var(--purple)
+    ); */
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* -webkit-text-fill-color: transparent; */
+}
+
+.koreanText {
+    animation: fade 0.8s linear 1, background-pan 3s linear infinite;
+}
+
+.englishText {
+    animation: fade2 0.8s linear 1, background-pan 3s linear infinite;
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+@keyframes fade {
+    from, to{
+        color: transparent
+    } 
+
+    50% {
+        color: rgb(0, 0, 0)
+    }
+}
+
+@keyframes fade2 {
+    from, to{
+        color: transparent
+    } 
+
+    50% {
+        color: rgb(0, 0, 0)
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.diamond {
+    position: absolute; 
+    scale: 1;
+    left: 100%;
+    animation: rotate 30s linear infinite;
+    opacity: 1;
+}
+
+.diamond:hover {
+    cursor: pointer;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    } to {
+        rotate: 360deg;
+    }
+}
+
+@media only screen and (max-width: 1260px) {
+    .diamond {
+        scale: 0.5;
+    }
+}

@@ -1,0 +1,42 @@
+.Choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+}
+
+.Choice img {
+    height: 40vh;
+    /* max-width: 400px; */
+    margin: 0 1em;
+    border-radius: 25px;
+    box-shadow: 2px 2px 3px #EF539D;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.Choice img:hover {
+    cursor: pointer;
+    border: 5px solid white;
+    box-shadow: none;
+}
+
+#cancelButton {
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    line-height: 0.78em;
+    opacity: 0.5;
+}
+
+#cancelButton:hover {
+    opacity: 1;
+    cursor: pointer;
+}

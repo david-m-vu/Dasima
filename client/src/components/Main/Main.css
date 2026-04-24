@@ -1,0 +1,81 @@
+.Main {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0d0c;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.searchArea {
+    padding-top: 1vh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.homeIcon {
+    position: absolute;
+    width: 2.5em;
+    margin: 1em;
+    left: 0;
+    top: 0;
+    z-index: 2
+}
+
+#imageRangeInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 0.5em;
+}
+
+#imageRangeLabel {
+    color: #EF539D
+}
+
+#slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 1em;
+    margin-top: 0.5em;
+}
+
+.Choice {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+
+    animation: drop-in 0.75s ease 1;
+}
+
+.overlay {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+}
+
+@keyframes drop-in {
+    from {
+        top: -50%;
+        opacity: 0;
+    }
+    
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
